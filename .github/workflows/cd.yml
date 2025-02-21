@@ -27,7 +27,7 @@ jobs:
         run: |
           curl -H "Accept: application/vnd.github.v3.raw" \
           -o docker-compose.yml \
-          https://api.github.com/repos/TrefflyTeam/backend/contents/infra/docker-compose.yml
+          https://api.github.com/repos/TrefflyTeam/backend/contents/docker-compose.yml
 
       - name: Copy docker-compose.yml to server
         run: |
