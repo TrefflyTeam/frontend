@@ -15,7 +15,6 @@ jobs:
     steps:
       - name: Checkout frontend code
         uses: actions/checkout@v4
-        with:
 
       - name: Install dependencies
         run: |         
