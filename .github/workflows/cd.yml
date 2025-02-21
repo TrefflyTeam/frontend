@@ -48,7 +48,7 @@ jobs:
 
       - name: Build Docker image for frontend
         run: |
-          docker build -t g0dd0r0/treffly-client:latest ./front
+          docker build -t g0dd0r0/treffly-client:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
