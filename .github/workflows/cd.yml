@@ -66,4 +66,5 @@ jobs:
           cd ${{ secrets.APP_PATH }} &&
           docker compose pull frontend &&
           docker compose up -d frontend
+          docker system prune -f
           ENDSSH
