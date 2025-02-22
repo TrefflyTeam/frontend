@@ -1,10 +1,17 @@
-FROM node:18 as builder
+FROM node:18-alpine
 
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+
+COPY package.json .
+
+RUN npm install
+
+RUN npm i -g serve
+
 COPY . .
+
 RUN npm run build
 
-FROM caddy:2-alpine
-COPY --from=builder /app/dist /var/www/html
+EXPOSE 80
+
+CMD [ "serve", "-s", "dist" ]
