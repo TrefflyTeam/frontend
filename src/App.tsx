@@ -8,7 +8,7 @@ function App() {
     fetch("/api/test").then(res => {
       console.debug(res);
     })
-    fetch("localhost/api/test").then(res => {
+    fetch("https://localhost/api/test").then(res => {
       console.debug(res);
     })
   }, []);
